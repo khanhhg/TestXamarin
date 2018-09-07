@@ -23,7 +23,8 @@ namespace Demo
 
         protected override void OnStart()
         {
-            // Handle when your app starts AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
+            // Handle when your app starts
+            AppCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
         }
 
         protected override void OnSleep()

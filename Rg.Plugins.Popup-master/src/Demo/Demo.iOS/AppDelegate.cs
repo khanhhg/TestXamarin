@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using UIKit;
-
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 namespace Demo.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -21,7 +23,7 @@ namespace Demo.iOS
             Rg.Plugins.Popup.Popup.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            AppCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
             return base.FinishedLaunching(app, options);
         }
     }
